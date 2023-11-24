@@ -1,5 +1,5 @@
 {
-    "name": "phpwine/wpmenuwalker",
+    "name": "wine/wpmenuwalker",
     "type": "library",
     "description": "For WordPress Custom Menu extending Walker with PHPWine",
     "keywords": ["WP Menu","PHPLibrary"],
