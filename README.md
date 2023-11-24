@@ -20,6 +20,8 @@
 ```
 
 ```PHP
+// namespace
+ use \PHPWineWPWalker\WineWPMenuWalker;
 
 // init custom menu 
  wp_nav_menu( array(
