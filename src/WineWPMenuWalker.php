@@ -35,7 +35,7 @@ use \Walker_Nav_Menu;
 * @license   MIT License
 * @link      https://github.com/PHPWine/WineWPMenuWalker
 * @link      https://github.com/PHPWine/PHPWine/README.md
-* @version   v1.3.8
+* @version   v1.4.1
 * @since     11.24.2023
 *
 */
@@ -103,7 +103,7 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
       * @Defined Walker: hook top base on class and depth 
       * "01_sub_menut_child"
       * ----------------------------------------------------------------- */
-      $output .= $this->appendTo($hook_tmp_class, $depth, $args);
+      $output .= $this->appendTo('',$hook_tmp_class, $depth, $args);
 
      /**
       * -----------------------------------------------------------------
@@ -180,13 +180,6 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
           );
 
         }
-       
-       /**
-        * -----------------------------------------------------------------
-        * @Defined Walker: hook append to end
-        * "bottom_English"
-        * ----------------------------------------------------------------- */
-        $output .= $this->appendTo($item, $depth, $args, $id);
 
     }
 
@@ -197,6 +190,14 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
      * ----------------------------------------------------------------- */
     public function end_el(&$output, $item, $depth = 0, $args = null) {
         $output .= $this->LIx;
+       
+       /**
+        * -----------------------------------------------------------------
+        * @Defined Walker: hook append to end
+        * "bottom_English"
+        * ----------------------------------------------------------------- */
+        $output .= $this->appendTo('end',$item, $depth, $args);
+
     }
 
     /**
@@ -221,10 +222,16 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
     public function appendTo(string $assigd, $item, $depth = 0, $args = null, $id = 0) {
 
         $hooked = $this->valid_hook($item->title?? false);
-        $hooked = strtolower($hooked);
 
-        return later($hooked, $item, $depth, $args, $id);
-
+        switch ($assigd) {
+         case 'end':
+            return later('bottom_'.$hooked, $item, $depth, $args, $id);
+            break;
+        
+         default:
+            return later('top_'.$hooked, $item, $depth, $args, $id);
+            break;
+        }
     }
 
    /**
