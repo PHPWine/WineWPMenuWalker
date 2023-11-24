@@ -1,6 +1,11 @@
 # WineWPMenuWalker
 
 ```PHP
+ /* required version *v2.0 */
+ composer require phpwine/optimizedhtml v2.0
+```
+
+```PHP
 
   // Register custom navigation menu
   add_action( 'init', 'nielsoffice_nav_menus' );
