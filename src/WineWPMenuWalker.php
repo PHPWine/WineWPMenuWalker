@@ -35,7 +35,7 @@ use \Walker_Nav_Menu;
 * @license   MIT License
 * @link      https://github.com/PHPWine/WineWPMenuWalker
 * @link      https://github.com/PHPWine/PHPWine/README.md
-* @version   v1.3.5
+* @version   v1.3.6
 * @since     11.24.2023
 *
 */
@@ -81,7 +81,7 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
         
       // assigned class to child menu
       if( $depth == 0 ) {
-         $depth     = '00_';
+         $depth     = 'zero_';
          $tmp_class = 'sub-menu';
          $tmp_class = str_replace('-', '_',$tmp_class);
          $hook_tmp_class  = $this->valid_hook($depth.$tmp_class);
@@ -92,7 +92,7 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
      * ----------------------------------------------------------------- */  
       }else if( $depth == 1 ) {
 
-        $depth     = '01_';
+        $depth     = 'one_';
         $tmp_class = 'sub-menu t-child';
         $tmp_class = str_replace('-', '_',$tmp_class);
         $hook_tmp_class  = $this->valid_hook($depth.$tmp_class);
@@ -103,7 +103,7 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
       * @Defined Walker: hook top base on class and depth 
       * "01_sub_menut_child"
       * ----------------------------------------------------------------- */
-      $output .= $this->appendTo('',$hook_tmp_class, $args);
+      $output .= $this->appendTo('',$hook_tmp_class, $depth, $args);
 
      /**
       * -----------------------------------------------------------------
