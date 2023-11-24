@@ -2,7 +2,7 @@
 
 ```PHP
  /* Installation */
- composer require phpwine/wpmenuwalker
+ composer require phpwine/wpmenuwalker v1.4.1
 
  /* required version *v2.0 */
  composer require phpwine/optimizedhtml v2.0
