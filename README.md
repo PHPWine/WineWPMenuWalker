@@ -72,11 +72,26 @@
  // Hooks sub-menu child parent [ assigned to depth]
  function one_sub_menut_child( $depth, $args ) { /***/ }
 
- // Hooks Replace Content menu specific item
+ // Hooks Replace Content menu specific item link
+ function Courses( $item, $depth, $args, $id ) { /***/ }
+
+ // Hooks Replace Content menu specific item no-link
  function item_24Courses( $item, $depth, $args, $id ) { /***/ }
   
  // Hooks insert element top and bottom from item
  function top_Courses( $item, $depth, $args, $id ) { /***/ }
  function bottom_Courses( $item, $depth, $args, $id ) { /***/ }
+
+```
+
+```PHP
+// replace link || no-link
+function item_27English() {
+  return [
+   child=> [ 
+     [h1, value=>["Hello Wolrd"]]	
+   ]	
+ ];
+}
 
 ```
