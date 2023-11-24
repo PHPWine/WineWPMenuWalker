@@ -1,6 +1,9 @@
 # WineWPMenuWalker
 
 ```PHP
+ /* Installation */
+ composer require phpwine/wpmenuwalker
+
  /* required version *v2.0 */
  composer require phpwine/optimizedhtml v2.0
 ```
