@@ -9,13 +9,19 @@
 ```
 
 ```PHP
- // functions.php file on the very top 
+ <?php 
+ 
+ // functions.php 
+ if ( ! defined( 'WPINC' ) ) { die; }
+
+ // file on the very top 
  use \PHPWineOptimizedHtml\OptimizedHtml;
 
  /** PHPWine **/
  require_once get_template_directory() . '/vendor/autoload.php';
 
  $wine = new OptimizedHtml;
+ ...
 
 ```
 
