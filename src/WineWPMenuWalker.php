@@ -35,7 +35,7 @@ use \Walker_Nav_Menu;
 * @license   MIT License
 * @link      https://github.com/PHPWine/WineWPMenuWalker
 * @link      https://github.com/PHPWine/PHPWine/README.md
-* @version   v1.5
+* @version   v1.3.5
 * @since     11.24.2023
 *
 */
