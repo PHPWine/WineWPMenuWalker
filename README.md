@@ -37,3 +37,38 @@
 
 
 ```
+
+```HTML
+
+<nav class="menu-wine">
+    <ul class="p-wine wine" id="primary-menu">
+        <li id="item_25" class="item-25"><a href="#" class="link-25">Home</a></li>
+        <li id="item_24" class="course-title-class">
+            <a href="#" class="link-24">Courses</a>
+            <ul class="sub_menu"> <!-- first child -->
+                <li id="item_27" class="item-27">
+                    <a href="#" class="link-27">English</a>
+                    <ul class="sub_menu t_child"> <!-- second child -->
+                        <li id="item_26" class="item-26"><a href="#" class="link-26">Submit a bug</a></li>
+                    </ul>
+                </li>
+                <li id="item_28" class="item-28"></li>
+            </ul>
+        </li>
+        <li id="item_23" class="item-23"><a href="#" class="link-23">Showcase</a></li>
+        <li id="item_22" class="item-22"><a href="#" class="link-22">Blog</a></li>
+        <li id="item_21" class="item-21"><a href="#" class="link-21">Buy me coffee?</a></li>
+    </ul>
+</nav>
+
+```
+
+```PHP
+ // Hooks Replace Content menu specific item
+ function item_24Courses() { /***/ }
+  
+ // Hooks insert element top and bottom from item
+ function top_Courses() { /***/ }
+ function bottom_Courses() { /***/ }
+
+```
