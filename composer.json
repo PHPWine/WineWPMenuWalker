@@ -1,0 +1,27 @@
+{
+    "name": "phpwine/wpmenuwalker",
+    "type": "library",
+    "description": "For WordPress Custom Menu extending Walker with PHPWine",
+    "keywords": ["WP Menu","PHPLibrary"],
+    "homepage": "https://github.com/PHPWine/WineWPMenuWalker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leinner Zednanref",
+            "email": "nielsoffice.wordpress.php@gmail.com",
+            "homepage": "https://github.com/PHPWine/WineWPMenuWalker",
+            "role": "Author and Maintainer"
+        } 
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "PHPWineWPWalker\\" : "src/"
+        }    
+     },
+    "require": {
+        
+        "php": ">=8.0",
+        "PHPWineOptimizedHtml": "v2.0"
+        
+    }
+}
