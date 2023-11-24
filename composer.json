@@ -20,6 +20,8 @@
      },
     "require": {
         
-        "php": ">=8.0"        
+        "php": ">=8.0",
+        "PHPWineOptimizedHtml": ">=v2.0"
+        
     }
 }
