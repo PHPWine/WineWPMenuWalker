@@ -151,8 +151,8 @@ class WineWPMenuWalker extends Walker_Nav_Menu {
         
        /**
         * -----------------------------------------------------------------
-        * @Defined Walker: hook for replace content 
-        * "item28_Tagalog"
+        * @Defined Walker: hook for replace content item 
+        * "item_28Tagalog"
         * ----------------------------------------------------------------- */
         if(function_exists($replace_content)) {
 
