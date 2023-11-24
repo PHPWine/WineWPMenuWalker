@@ -1,6 +1,9 @@
 # WineWPMenuWalker
 
 ```PHP
+ /* Installation */
+ composer require phpwine/wpmenuwalker
+
  /* required version *v2.0 */
  composer require phpwine/optimizedhtml v2.0
 ```
@@ -20,6 +23,8 @@
 ```
 
 ```PHP
+// namespace
+ use \PHPWineWPWalker\WineWPMenuWalker;
 
 // init custom menu 
  wp_nav_menu( array(
@@ -64,11 +69,14 @@
 ```
 
 ```PHP
+ // Hooks sub-menu child parent [ assigned to depth]
+ function one_sub_menut_child( $depth, $args ) { /***/ }
+
  // Hooks Replace Content menu specific item
- function item_24Courses() { /***/ }
+ function item_24Courses( $item, $depth, $args, $id ) { /***/ }
   
  // Hooks insert element top and bottom from item
- function top_Courses() { /***/ }
- function bottom_Courses() { /***/ }
+ function top_Courses( $item, $depth, $args, $id ) { /***/ }
+ function bottom_Courses( $item, $depth, $args, $id ) { /***/ }
 
 ```
